@@ -3,16 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat App</title>
   <link rel="stylesheet" href="styles.css">
-  <title>Simple Messaging App</title>
 </head>
 <body>
+  <div class="title_container">
+    <h1>Message Page</h1>
+  </div>
   <div id="messages"></div>
+  
   <form id="messageForm">
-    <input type="text" id="sender" placeholder="Your Name" required>
-    <input type="text" id="text" placeholder="Type your message" required>
-    <button type="submit">Send</button>
+    <input type="text" id="sender" placeholder="Enter your name" required>
+    
+    <input type="text" id="text" placeholder="Enter your message" required>
+    
+    <button class="send_button" type="submit">Send</button>
   </form>
+  <div class="delete_buttons">
+    <button id="deleteChats">Delete All Chats</button>
+    <button id="deleteChatsByName">Delete Chats by Name</button>
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>

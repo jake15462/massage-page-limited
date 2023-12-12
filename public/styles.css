@@ -21,3 +21,77 @@ body {
     padding: 5px;
   }
   
+  #messages {
+    height: 100px;
+    overflow-y: scroll;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 0 1.2rem 0 rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 5px;
+  }
+
+  #messageForm {
+    max-width: 500px;
+    width: 100%;
+  }
+
+  #sender {
+    width: 200px;
+  }
+  
+  button {
+    color: #fff;
+    background-color: rgb(250, 120, 120);
+    border: 0;
+  }
+
+  body {
+    background-color: rgb(200, 200, 250);
+  }
+
+  .delete_buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .delete_buttons button {
+    width: 200px;
+  }
+
+  .send_button {
+    background-color: transparent;
+    box-shadow: 0 0 1.2rem 0 rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+  }
+
+  button {
+    border-radius: 5px;;
+  }
+
+  input {
+    border: none;
+    color: #000;
+    border-radius: 5px;
+  }
+
+  .label1 {
+    background-color: #fff;
+    width: 55px;
+    padding: 6px;
+  }
+
+  .label2 {
+    background-color: #fff;
+    width: 70px;
+    padding: 6px;
+  }
+
+  .title_container {
+    display: flex;
+    justify-content: center;
+  }

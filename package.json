@@ -1,7 +1,6 @@
 {
   "name": "massage-page-limited",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node server.js"
@@ -10,8 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@ngrok/ngrok": "^0.9.1",
     "body-parser": "^1.20.2",
     "express": "^4.18.2",
-    "ws": "^8.15.0"
-  }
+    "request": "^2.88.2"
+  },
+  "description": ""
 }

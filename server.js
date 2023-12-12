@@ -27,7 +27,21 @@ app.post('/api/messages', (req, res) => {
   res.json(newMessage);
 });
 
+app.delete('/api/messages', (req, res) => {
+  messages = []; // Clear the messages array
+  res.json({ message: 'All chats deleted successfully' });
+});
+
+app.delete('/api/messagesByName', (req, res) => {
+  const senderNameToDelete = req.query.sender;
+
+  // Delete messages by sender's name
+  messages = messages.filter(message => message.sender !== senderNameToDelete);
+
+  res.sendStatus(200);
+});
+
 // Start the server
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
