@@ -27,15 +27,16 @@ app.post('/api/messages', (req, res) => {
   res.json(newMessage);
 });
 
+// API endpoint for deleting all messages
 app.delete('/api/messages', (req, res) => {
-  messages = []; // Clear the messages array
-  res.json({ message: 'All chats deleted successfully' });
+  messages = [];
+  res.sendStatus(200);
 });
 
+// API endpoint for deleting messages by sender's name
 app.delete('/api/messagesByName', (req, res) => {
   const senderNameToDelete = req.query.sender;
 
-  // Delete messages by sender's name
   messages = messages.filter(message => message.sender !== senderNameToDelete);
 
   res.sendStatus(200);

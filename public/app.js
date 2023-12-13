@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
       fetch(`/api/messagesByName?sender=${encodeURIComponent(senderNameToDelete)}`, {
         method: 'DELETE',
       })
+      .then(response => response.json()) // Log the response to check for errors
       .then(() => {
         // Refresh the messages after deletion
         fetchMessages();
