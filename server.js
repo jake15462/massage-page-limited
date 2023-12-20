@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 const app = express();
 const port = 3000;
@@ -11,8 +12,8 @@ let messages = [];
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Serve static files (HTML, CSS, JS)
-app.use(express.static('public'));
+// Serve static files (HTML, CSS, JS) from the root directory
+app.use(express.static(path.join(__dirname)));
 
 // API endpoint for fetching messages
 app.get('/api/messages', (req, res) => {
@@ -40,6 +41,11 @@ app.delete('/api/messagesByName', (req, res) => {
   messages = messages.filter(message => message.sender !== senderNameToDelete);
 
   res.sendStatus(200);
+});
+
+// Serve your HTML file as the default route
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Start the server
